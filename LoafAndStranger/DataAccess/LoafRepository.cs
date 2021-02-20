@@ -29,5 +29,11 @@ namespace LoafAndStranger.DataAccess
             var loaf = _loaves.FirstOrDefault(bread => bread.Id == id);
             return loaf;
         }
+
+        public void Remove(int id)
+        {
+            var loafToRemove = Get(id);
+            _loaves.Remove(loafToRemove);
+        }
     }
 }
